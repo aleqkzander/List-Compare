@@ -1,0 +1,10 @@
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\bin\Debug\List Compare.exe.config
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\bin\Debug\List Compare.exe
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\bin\Debug\List Compare.pdb
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.csproj.AssemblyReference.cache
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List_Compare.Start.resources
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List_Compare.Properties.Resources.resources
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.csproj.GenerateResource.cache
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.csproj.CoreCompileInputs.cache
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.exe
+C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.pdb
