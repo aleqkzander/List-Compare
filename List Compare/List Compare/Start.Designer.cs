@@ -31,20 +31,21 @@ namespace List_Compare
         {
             this.OpenFirstList = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ClearFirstList = new System.Windows.Forms.Button();
+            this.ResultLabel = new System.Windows.Forms.Label();
+            this.ScoreListOne = new System.Windows.Forms.Label();
+            this.CompareList = new System.Windows.Forms.Button();
             this.FirstListBox = new System.Windows.Forms.RichTextBox();
+            this.ClearFirstList = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ScoreListTwo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SecondListBox = new System.Windows.Forms.RichTextBox();
             this.ClearSecondList = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.OpenSecondList = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.CompareList = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ScoreListOne = new System.Windows.Forms.Label();
-            this.ScoreListTwo = new System.Windows.Forms.Label();
-            this.ResultLabel = new System.Windows.Forms.Label();
+            this.SplitString = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@ namespace List_Compare
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SplitString);
             this.groupBox1.Controls.Add(this.ResultLabel);
             this.groupBox1.Controls.Add(this.ScoreListOne);
             this.groupBox1.Controls.Add(this.CompareList);
@@ -75,14 +77,41 @@ namespace List_Compare
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "First List";
             // 
-            // groupBox2
+            // ResultLabel
             // 
-            this.groupBox2.Location = new System.Drawing.Point(305, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(300, 100);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Fist List";
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Location = new System.Drawing.Point(6, 339);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(68, 13);
+            this.ResultLabel.TabIndex = 7;
+            this.ResultLabel.Text = "RESULT: 00";
+            // 
+            // ScoreListOne
+            // 
+            this.ScoreListOne.AutoSize = true;
+            this.ScoreListOne.Location = new System.Drawing.Point(6, 300);
+            this.ScoreListOne.Name = "ScoreListOne";
+            this.ScoreListOne.Size = new System.Drawing.Size(62, 13);
+            this.ScoreListOne.TabIndex = 6;
+            this.ScoreListOne.Text = "SCORE: 00";
+            // 
+            // CompareList
+            // 
+            this.CompareList.Location = new System.Drawing.Point(168, 19);
+            this.CompareList.Name = "CompareList";
+            this.CompareList.Size = new System.Drawing.Size(75, 23);
+            this.CompareList.TabIndex = 5;
+            this.CompareList.Text = "Compare";
+            this.CompareList.UseVisualStyleBackColor = true;
+            this.CompareList.Click += new System.EventHandler(this.CompareList_Click);
+            // 
+            // FirstListBox
+            // 
+            this.FirstListBox.Location = new System.Drawing.Point(6, 48);
+            this.FirstListBox.Name = "FirstListBox";
+            this.FirstListBox.Size = new System.Drawing.Size(288, 249);
+            this.FirstListBox.TabIndex = 4;
+            this.FirstListBox.Text = "";
             // 
             // ClearFirstList
             // 
@@ -94,13 +123,14 @@ namespace List_Compare
             this.ClearFirstList.UseVisualStyleBackColor = true;
             this.ClearFirstList.Click += new System.EventHandler(this.ClearFirstList_Click);
             // 
-            // FirstListBox
+            // groupBox2
             // 
-            this.FirstListBox.Location = new System.Drawing.Point(6, 48);
-            this.FirstListBox.Name = "FirstListBox";
-            this.FirstListBox.Size = new System.Drawing.Size(288, 249);
-            this.FirstListBox.TabIndex = 4;
-            this.FirstListBox.Text = "";
+            this.groupBox2.Location = new System.Drawing.Point(305, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(300, 100);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Fist List";
             // 
             // groupBox3
             // 
@@ -116,6 +146,24 @@ namespace List_Compare
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Second List";
+            // 
+            // ScoreListTwo
+            // 
+            this.ScoreListTwo.AutoSize = true;
+            this.ScoreListTwo.Location = new System.Drawing.Point(6, 300);
+            this.ScoreListTwo.Name = "ScoreListTwo";
+            this.ScoreListTwo.Size = new System.Drawing.Size(62, 13);
+            this.ScoreListTwo.TabIndex = 7;
+            this.ScoreListTwo.Text = "SCORE: 00";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(185, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "TEXT TO COMPARE";
             // 
             // SecondListBox
             // 
@@ -158,51 +206,15 @@ namespace List_Compare
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // CompareList
+            // SplitString
             // 
-            this.CompareList.Location = new System.Drawing.Point(168, 19);
-            this.CompareList.Name = "CompareList";
-            this.CompareList.Size = new System.Drawing.Size(75, 23);
-            this.CompareList.TabIndex = 5;
-            this.CompareList.Text = "Compare";
-            this.CompareList.UseVisualStyleBackColor = true;
-            this.CompareList.Click += new System.EventHandler(this.CompareList_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "TEXT TO COMPARE";
-            // 
-            // ScoreListOne
-            // 
-            this.ScoreListOne.AutoSize = true;
-            this.ScoreListOne.Location = new System.Drawing.Point(6, 300);
-            this.ScoreListOne.Name = "ScoreListOne";
-            this.ScoreListOne.Size = new System.Drawing.Size(62, 13);
-            this.ScoreListOne.TabIndex = 6;
-            this.ScoreListOne.Text = "SCORE: 00";
-            // 
-            // ScoreListTwo
-            // 
-            this.ScoreListTwo.AutoSize = true;
-            this.ScoreListTwo.Location = new System.Drawing.Point(6, 300);
-            this.ScoreListTwo.Name = "ScoreListTwo";
-            this.ScoreListTwo.Size = new System.Drawing.Size(62, 13);
-            this.ScoreListTwo.TabIndex = 7;
-            this.ScoreListTwo.Text = "SCORE: 00";
-            // 
-            // ResultLabel
-            // 
-            this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Location = new System.Drawing.Point(6, 339);
-            this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(68, 13);
-            this.ResultLabel.TabIndex = 7;
-            this.ResultLabel.Text = "RESULT: 00";
+            this.SplitString.Location = new System.Drawing.Point(219, 303);
+            this.SplitString.Name = "SplitString";
+            this.SplitString.Size = new System.Drawing.Size(75, 23);
+            this.SplitString.TabIndex = 8;
+            this.SplitString.Text = "SplitString";
+            this.SplitString.UseVisualStyleBackColor = true;
+            this.SplitString.Click += new System.EventHandler(this.SplitString_Click);
             // 
             // Start
             // 
@@ -240,6 +252,7 @@ namespace List_Compare
         private System.Windows.Forms.Label ScoreListOne;
         private System.Windows.Forms.Label ScoreListTwo;
         private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Button SplitString;
     }
 }
 

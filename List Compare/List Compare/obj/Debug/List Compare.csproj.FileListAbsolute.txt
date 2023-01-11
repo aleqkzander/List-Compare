@@ -8,3 +8,13 @@ C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\
 C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.csproj.CoreCompileInputs.cache
 C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.exe
 C:\Users\alexa\OneDrive\Dokumente\GitHub\List-Compare\List Compare\List Compare\obj\Debug\List Compare.pdb
+D:\List-Compare\List Compare\List Compare\bin\Debug\List Compare.exe.config
+D:\List-Compare\List Compare\List Compare\bin\Debug\List Compare.exe
+D:\List-Compare\List Compare\List Compare\bin\Debug\List Compare.pdb
+D:\List-Compare\List Compare\List Compare\obj\Debug\List Compare.csproj.AssemblyReference.cache
+D:\List-Compare\List Compare\List Compare\obj\Debug\List_Compare.Start.resources
+D:\List-Compare\List Compare\List Compare\obj\Debug\List_Compare.Properties.Resources.resources
+D:\List-Compare\List Compare\List Compare\obj\Debug\List Compare.csproj.GenerateResource.cache
+D:\List-Compare\List Compare\List Compare\obj\Debug\List Compare.csproj.CoreCompileInputs.cache
+D:\List-Compare\List Compare\List Compare\obj\Debug\List Compare.exe
+D:\List-Compare\List Compare\List Compare\obj\Debug\List Compare.pdb

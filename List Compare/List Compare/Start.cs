@@ -52,10 +52,12 @@ namespace List_Compare
             }
         }
 
+
         #region clear first list
         private void ClearFirstList_Click(object sender, EventArgs e)
         {
             FirstListBox.Clear();
+            listOne.Clear();
         }
         #endregion
 
@@ -83,14 +85,16 @@ namespace List_Compare
             }
         }
 
+
         #region clear second list
         private void ClearSecondList_Click(object sender, EventArgs e)
         {
             SecondListBox.Clear();
+            listTwo.Clear();
         }
         #endregion
 
-
+        #region compare
         private void CompareList_Click(object sender, EventArgs e)
         {
             ResultLabel.Text = "RESULT: " + Compare().ToString("00");
@@ -99,29 +103,52 @@ namespace List_Compare
 
         private int Compare()
         {
+            // set score to zero
             int score = 0;
 
-            // loop throug list one
-            foreach (string element1 in listOne)
+            // loop
+            for (int i = 0; i < listOne.Count; i++)
             {
-                // foreach entry in list1 loop throug list2 and compare
-                foreach (string element2 in listOne)
+                // if value from booth lists is the same add score
+                if (listOne[i] == listTwo[i])
                 {
-                    if (element1 == element2)
-                    {
-                        // add score
-                        score++;
-                    }
-                    else
-                    {
-                        // continue
-                        continue;
-                    }
+                    score++;
                 }
             }
 
             // return score
             return score;
+        }
+        #endregion
+
+
+        private void SplitString_Click(object sender, EventArgs e)
+        {
+            Split(FirstListBox.Text);
+        }
+
+
+        private List<string> Split(string text)
+        {
+            // create empty list
+            List<string> list = new List<string>();
+
+            // create empty line
+            string line = string.Empty;
+
+            // use stringreader
+            using (StringReader reader = new StringReader(text))
+            {
+                // read line by line
+                while ((line = reader.ReadLine()) != null)
+                {
+                    // add to list
+                    list.Add(line);
+                }
+            }
+
+            // return the list
+            return list;
         }
     }
 }
